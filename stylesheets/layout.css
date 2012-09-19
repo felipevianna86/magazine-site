@@ -14,6 +14,46 @@
 	#Media Queries
 	#Font-Face */
 
+	/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #181818;
+		font-family: "Georgia", "Times New Roman", serif;
+		font-weight: normal; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 {  line-height: 49px; margin-bottom: 14px;}
+	h2 {  line-height: 42px; margin-bottom: 7px; }
+	h3 {  line-height: 35px; margin-bottom: 7px; }
+	h4 {  line-height: 28px; margin-bottom: 7px; }
+	h5 {  line-height: 21px; }
+	
+	p { margin: 0 0 21px 0; }
+	p.lead { line-height: 28px; }
+
+	
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 21px; }
+	blockquote { margin: 0 0 21px; padding: 7px 20px 0 19px }
+	
+
+	hr { 
+		margin: 14px 0 28px;  
+	}
+
+
+/* #Lists (corrections)
+================================================== */
+	ul, ol { margin-bottom: 21px; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 7px 0 7px 30px; }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 7px; }
+	li { line-height: 21px; margin-bottom: 14px; }
+	
+	
+	
+
+
 /* #Site Styles
 ================================================== */
 
@@ -23,6 +63,11 @@
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box; 
 }
+
+img {
+	max-width: 100%;
+}
+
 
 /*bands*/
 
@@ -41,21 +86,21 @@
 				url(../images/bg_dark.png) repeat, 
 				#343434;
 
-	padding: 49px 0 14px 0;
-	color: #e0e0e0;				
+	padding: 49px 0 14px 0; 
+	color: e0e0e0;		
 }
 
 .band.bottom {
-	background: url(../images/stitch_staggered.png) repeat-x,
-				url(../images/bg_bottom.png) repeat, 
-				#343434;
+		background: url(../images/stitch_staggered.png) repeat-x,
+					url(../images/bg_bottom.png) repeat, 
+					#343434;
 
-	padding: 28px 0 7px 0;
-	color: #e0e0e0;			
+		padding: 28px 0 7px 0;
+		color: e0e0e0;			
+
 }
 
-
-/* heading */
+/*heading*/
 
 header.main {
 	padding: 35px 0;
@@ -66,7 +111,7 @@ header h1.logo {
 	float: left;
 }
 
-header h1.logo a {
+header h1.logo a{
 	width: 250px;
 	height: 49px;
 	display: block;
@@ -75,10 +120,10 @@ header h1.logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
+
 }
 
-/*navigation*/
-
+/*Navigation */
 nav.primary ul,
 nav.primary ul li {
 	margin: 0px;
@@ -97,7 +142,7 @@ nav.primary ul li{
 	position: relative;
 }
 
-nav.primary ul li  a {
+nav.primary ul li a{
 	display: inline-block;
 	line-height: 49px;
 	padding: 0 14px;
@@ -106,16 +151,14 @@ nav.primary ul li  a {
 	text-decoration:  none;
 	font-weight: bold;
 	letter-spacing: 0.08em;
-
 }
 
-nav.primary ul li a:hover{
+nav.primary ul li a:hover {
 	background: #424242;
 	cursor: pointer;
 }
 
-/*submenu*/
-
+/*Submenu*/
 nav.primary ul ul {
 	opacity: 0;
 	filter: alpha(opacity=0);
@@ -128,7 +171,6 @@ nav.primary ul ul {
 	height: 0px;
 	overflow: hidden;
 
-
 	-webkit-transition: opacity 0.4s ease-out;
 	-moz-transition: opacity 0.4s ease-out;
 	-o-transition: opacity 0.4s ease-out;
@@ -138,14 +180,11 @@ nav.primary ul ul {
 	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);	 
-
 }
-
 
 nav.primary ul li span {
 	display: none;
 }
-
 
 nav.primary ul li:hover ul {
 	opacity: 10;
@@ -165,15 +204,23 @@ nav.primary ul ul li a{
 	display: block;
 	line-height: 35px;
 	text-transform: none;
-	
+	white-space: nowrap;
 }
 
 nav.primary ul ul li:hover > a {
 	background: #424242;
 }
 
-/*footer*/
+/*images*/
+figure {
+	padding: 6px;
+	border: 1px solid #ededed;
+	background: #fff;
+	line-height: 0px 
 
+}
+
+/*Footer*/
 footer a,
 footer a:visited {
 	color: #8F8F8F;
@@ -181,6 +228,10 @@ footer a:visited {
 
 footer a:hover {
 	text-decoration: none;
+	color: #fff;
+}
+
+footer {
 	color: #fff;
 }
 
@@ -196,7 +247,7 @@ footer h3.logo {
 	margin: 14px 0 21px;
 }
 
-footer h3.logo a {
+footer h3.logo a{
 	width: 200px;
 	height: 35px;
 	display: block;
@@ -211,14 +262,11 @@ footer.main header {
 	background: url(../images/diagonal_dark.png) repeat;
 	font-size: 14px;
 	line-height: 1em;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
 	margin: 28px 0 0;
-
 }
 
-footer.main h4{
-	font-weight: bold;
+footer.main h4 {
+	font-weight:  bold;
 	color: #fff;
 	font-size: 14px;
 	line-height: 1em;
@@ -232,8 +280,158 @@ footer.main h4{
 	margin: 0 0 0 14px;
 }
 
-/* footer list */
+/*footer list*/
+footer.main li {
+	margin: 7px 0 0 ;
+}
 
+footer.main li{
+	padding: 21px 0;
+	margin: 0;
+	background: url(../images/stitch_staggered.png) repeat-x left bottom;
+}
+
+footer.main li:last-child{
+	background: none;
+}
+/*flickr styles*/
+div.flickr {
+	padding: 21px 0 0;
+}
+div.flickr img{
+	float: left;
+	max-width: 46%;
+	margin: 2%;
+	padding: 6px;
+	border: 1px solid #ededed;
+	background: #fff;
+}
+
+/*Slider Flexslider */
+
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* My own flexslider style */
+.flexslider{
+	margin: 21px 0;
+}
+
+.flex-control-nav {
+	width: 100%;
+	text-align: center;
+}
+
+.flex-control-nav li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.flex-control-nav li a {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: #d5d5d5;
+	border: 1px solid #d5d5d5;
+
+	cursor: pointer;
+
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+}
+
+.flex-control-nav li a.active,
+.flex-control-nav li a:hover {
+	background: #f1f1f1;
+}
+
+/*blog*/
+
+hr {
+	border: none;
+	border-bottom: 1px dashed #e5e5e5;
+	margin: 14px 0 28px
+}
+
+article .breadcrumbs {
+	margin-bottom: 7px;
+
+}
+
+article .meta{
+	margin-bottom: 7px;
+}
+
+/*Pagination*/
+
+nav.pagination {
+	width: 100%;
+	text-align: center;
+	margin: 21px 0 35px 0;
+}
+
+nav.pagination li {
+	display: inline;
+}
+
+nav.pagination li a{
+	display: inline-block;
+	line-height: 35px;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	padding: 0 7px;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 3px solid #cccccc;
+}
+nav.pagination li a.selected,
+nav.pagination li a:hover {
+	background: url(../images/bg_dark.png) #000;
+	border: none;
+	color: #fff;
+}
 
 
 /* #Page Styles
@@ -249,10 +447,11 @@ footer.main h4{
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
 
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		article .three.thumbnail {
+			display: none;
+		}
 
 		nav.primary select {
 			display: block;
@@ -265,7 +464,11 @@ footer.main h4{
 		.bottom footer {
 			text-align: center;
 		}
+
 	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {}
